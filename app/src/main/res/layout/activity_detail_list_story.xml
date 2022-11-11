@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".UI.DetailListStoryActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/customView"
+            tools:context=".UI.DetailListStoryActivity">
+
+        <ImageView
+            android:id="@+id/iv_detail_photo"
+            style="@style/imageDetail"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars"
+           />
+
+        <TextView
+            android:id="@+id/tv_detail_name"
+            style="@style/textView"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/detail_name"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:transitionName="detailName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_detail_photo" />
+
+
+
+        <TextView
+            android:id="@+id/tv_detail_description"
+            style="@style/textView"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            tools:text="@string/detail_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_location" />
+
+                <LinearLayout
+                    android:id="@+id/ll_location"
+                    style="@style/customView"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@id/tv_detail_description"
+                    app:layout_constraintTop_toBottomOf="@id/tv_detail_name"
+                    tools:ignore="MissingConstraints">
+
+                        <ImageView
+                            android:id="@+id/iv_add_location"
+                            style="@style/imageViewLocation"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_map"
+                            app:tint="@color/red" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_location"
+                            style="@style/customView"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="2"
+                            android:text="Location"
+                            android:textSize="14sp" />
+                </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_detail_date"
+            style="@style/textView"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="@string/detail_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_detail_photo" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/add_story"
+                    style="@style/floatingButton"
+                    android:backgroundTint="@color/color_blue"
+                    app:srcCompat="@drawable/ic__add_story"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

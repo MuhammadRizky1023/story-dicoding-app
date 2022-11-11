@@ -1,0 +1,135 @@
+Testing Scenario
+Android Intermediate  Submission 2nd Dicoding Story-App
+
+=======================================================
+
+TESTING PER UNIT SCENARIO
+
+// testing for  inner class AddList Story
+Inner-Class-AddListStoryViewModelTest
+1. messages return data  not  null
+- ensure the data object is not null
+- ensure the data object is in accordance with the alleged data
+2. loadingIsActive return data not  null
+- ensure the data object is not null
+- ensure the data object is in accordance with the alleged data
+3. verification uploadStory  is processing
+- ensure the function uploadStory it is  works
+- after uploading, make sure the messages get  not null
+- ensure that the messages received is in accordance with the alleged message
+
+// Testing for inner class StoryUserViewModelTest
+Inner-Class-ListStoryUserViewModelTest
+1. getUserLoginAuth return data  null
+- ensure the data object is not null
+- ensure the data obtained is in accordance with the alleged data
+2. verification saveUserLoginAuth is processing
+- ensure the saveLoginAuth function works as it should
+3. getTokenAuth return data  null
+- ensure the data object is not null
+- ensure the data obtained is in accordance with the alleged data
+4. verification saveTokenAuth is  processing
+- ensure the saveUserLoginAuth function works as it should
+5. getUserName return  data  not  null
+- ensure the data object is not null
+- ensure the data object is in accordance with the alleged data
+6. verification saveUserName  is working processing
+- make sure the saveName function is working properly
+
+// Testing for ListStoryUserViewModelTest
+Inner-Class-ListStoryUssViewModelTest
+1. verification getListStoryUserPage return not null
+- ensure the getPagingListStoriesUser function works as intended
+- ensure the data object is not null
+- ensure the amount of data as expected
+- ensure the data object is in accordance with the alleged data
+2.  getListStoryUserPager is Empty return  not null
+- ensure the data object is not null
+- ensure if the data is empty, the data object is empty
+
+// Testing for LoginUserViewModelTest
+Inner-Class-LoginUserViewModelTest
+1. messages  return data not  null
+- ensure the data object is not null
+- ensure the data object is in accordance with the alleged data
+2. loadingIsActive return data not  nul
+- ensure the data object is not null
+- ensure the data object is in accordance with the alleged data
+3. accountUser return data  not null
+- ensure the data object is not null
+- ensure the data object is in accordance with the alleged data
+4. verification getLoginAccountUser  is  processing
+- ensure the getResponseLoginUser function works as intended
+- ensure the data object after calling this function is not null
+- ensure the data object after calling this function matches the predicted data
+
+// Testing for MapUserViewModel
+Inner-Class-MapUserViewModel
+1. listStoryUser return  not  null
+- ensure the data object is not null
+- ensure the data object is in accordance with the alleged data
+- ensure the amount of data obtained is as expected
+2. messages return data not  null
+- ensure the data object is not null
+- ensure the data object is in accordance with the alleged data
+3. loadingIsActive return data  not  null
+- ensure the data object is not null
+- ensure the data object is in accordance with the alleged data
+4. verification geMapUser is processing
+- ensure the getMapUser is processing
+- ensure the data object after calling this function is not null
+- ensure the data object after calling this function matches the predicted data
+- ensure the amount of data object after calling this function as expected
+
+// Testing for RegisterUserViewModel
+Inner-Class-RegisterUserViewModel
+1. messages return data not null
+- ensure the data object is not null
+- ensure the data object is in accordance with the alleged data
+2. loadingIsActive return data  not  null
+- ensure that the data obtained is not null
+- ensure the data object is in accordance with the alleged data
+3. verification createAccountUser is processing
+- ensure the getResponseRegisterUser function works as intended
+- ensure that the message received after calling this function is not null
+- ensure that the message received after calling this function matches the expected message
+
+// Testing for ListStoryRepositoryTest
+Inner-Class-ListStoryRepositoryTest
+1. when listStoryUser return data not  null
+- ensure the data obtained is not null
+- Ensure that the data object is in accordance with the alleged data
+- ensure the amount of data object is in accordance with the alleged data
+2. when messages  return data  not null
+- ensure the data object is not null
+- ensure the data object is in accordance with the alleged data
+3. loadingIsActive return data  not null
+- ensure the data object is not null
+- Ensure that the data object is in accordance with the alleged data
+4. when accountUser return data  not null
+- ensure the data obtained is not null
+- Ensure that the data object is in accordance with the alleged data
+5. verification createAccountUser is processing
+- ensure the createAccountUser function works as intended
+- ensure that the messages received after calling this function is not null
+- ensure that the messages received after calling this function matches the expected messages
+6. verification getLoginAccountUser  is  processing
+- ensure the getLoginAccountUser function works as intended
+- ensure the data object after calling this function is not null
+- ensure the data object after calling this function matches the predicted data
+7. verification getListStoryUserPage  is  processing
+- ensure the getListStoryUserPage function works as it should
+- ensure the data obtained is not null
+- ensure the amount of data as expected
+- ensure the data object is in accordance with the alleged data
+8. verification getMapUser is  processing
+- ensure the getMapUser function works as intended
+- ensure the data object is not null
+- ensure the data object is in accordance with the alleged data
+- ensure the amount of data as expected
+9. verification uploadStory  is processing
+- ensure the uploadStory function works as it should
+- ensure that the messages received after calling this function is not null
+- ensure that the messages received is in accordance with the alleged messages
+
+

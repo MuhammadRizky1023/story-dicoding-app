@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_default_map"
+        style="@style/floatingMapButton"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/red"
+        android:src="@drawable/ic_map"
+        app:layout_constraintBottom_toTopOf="@id/fab_area_map"
+        app:layout_constraintEnd_toEndOf="@id/fab_real_map"
+        app:tint="@android:color/white"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_area_map"
+        style="@style/floatingMapButton"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/button_background"
+        android:src="@drawable/ic_area"
+        app:layout_constraintBottom_toTopOf="@id/fab_real_map"
+        app:layout_constraintEnd_toEndOf="@id/fab_real_map"
+        app:tint="@android:color/white"
+         />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_real_map"
+        style="@style/floatingMapButton"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/button_background"
+        android:src="@drawable/ic_satellite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/white"
+        />
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mapping"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintTop_toBottomOf="parent"
+        tools:context=".UI.Activities.MapUserActivity" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_item_story"
+        style="@style/floatingButton"
+        android:backgroundTint="@color/color_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic__add_story" />
+
+    <ProgressBar
+        android:id="@+id/loading_processing"
+        style="@style/LoadingProgressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

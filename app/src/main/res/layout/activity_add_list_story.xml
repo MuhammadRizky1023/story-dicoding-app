@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/customView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/customView"
+        android:paddingBottom="20dp"
+        tools:context=".ui.AddActivity">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/addTitleName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="name" />
+
+
+        <ImageView
+            android:id="@+id/iv_add_photo"
+            style="@style/addImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <LinearLayout
+            android:id="@+id/ll_add_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/ed_add_desc"
+            app:layout_constraintTop_toBottomOf="@id/iv_add_photo"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/iv_add_location"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_map"
+                android:contentDescription="@string/icon_map_pin"
+                app:tint="@color/red" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                style="@style/textViewLocation"/>
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/ed_add_desc"
+            android:layout_width="350dp"
+            android:layout_height="155dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="Description"
+            android:background="@drawable/boarder_line"
+            android:gravity="top|left"
+            android:hint="@string/description_user"
+            android:inputType="textMultiLine"
+            android:maxWidth="350dp"
+            android:maxHeight="155dp"
+            android:maxLines="8"
+            android:padding="12dp"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_add_location"
+            tools:ignore="RtlHardcoded" />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/upload_story"
+            android:background="@drawable/button_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ed_add_desc" />
+
+        <ProgressBar
+            android:id="@+id/loading_process"
+            style="@style/LoadingProgressBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
